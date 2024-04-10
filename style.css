@@ -1,0 +1,170 @@
+:root{
+    --color-verde-limao: #40DE63;
+    --color-verde-folha: #57A140;
+    --color-verde-hover: #31a548;
+    --color-verde-forte: #073832;
+    --color-cinza-claro: #cccc;
+    --shadow-sombra: rgb(185, 185, 185);
+    --shadow-box: 1px 3px 3px rgb(185, 185, 185),
+    -1px 0 0.4em rgb(185, 185, 185);
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Franklin Gothic Medium';
+    text-align: center;
+}
+
+/* LOGIN */
+.teladelogin{
+    width: 95vh;
+    height: 60vh;
+    border-radius: 25px;
+    margin: auto;
+    margin-top: 20vh;
+    display: flex;
+    box-shadow: var(--shadow-box);
+}
+.titulo{
+    width: 400px;
+    height: 100%;
+    border-radius: 25px 0 0 25px;
+    background-color: var(--color-verde-limao);
+    color: white;
+}
+.titulo p{
+    text-transform: uppercase;
+    margin-left: 10px;
+    font-weight: bold;
+    text-shadow: 5px 5px 3px var(--shadow-sombra);
+}
+.h1-1{
+    margin-top: 5vh;
+    font-size: 15vh; 
+    line-height: 70px;
+}
+.h1-2{
+    margin-top: -100px;
+    font-size: 20vh;
+    line-height: 150px;
+}
+.h1-3{
+    font-size: 20vh;
+    margin-top: -150px;
+    line-height: 150px;
+}
+.formulario{
+    width: 100%;
+    padding-top: 20vh;
+    text-align: center;
+}
+input[name="username"] {
+    width: 40vh;
+    height: 40px;
+    text-align: center;
+    font-size: 18px;
+    background-color: var(--color-cinza-claro);
+    border: none;
+    box-shadow: var(--shadow-box);
+}
+input[name="password"] {
+    margin-top: 40px;
+    width: 40vh;
+    height: 40px;
+    text-align: center;
+    font-size: 18px;
+    background-color: var(--color-cinza-claro);
+    border: none;
+    box-shadow: var(--shadow-box);
+}
+.botaoentrar{
+    margin-top: 50px;
+    padding: 10px 100px;
+    background-color: var(--color-verde-limao);
+    border: 3px solid white;
+    border-radius: 10px;
+    color: white;
+    font-family: 'Franklin Gothic Medium';
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: var(--shadow-box);
+}
+.botaoentrar:hover{
+    background-color: var(--color-verde-hover);
+ }
+span{
+    color: var(--color-cinza-claro);
+    margin-top: 30px;
+} 
+
+/* MENU */
+.backgroud-img{
+    background-image: url(./menu/imagem/Promoções.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%; 
+    border: 1px solid var(--color-verde-forte);
+    height: 100%;
+}
+.conteudo{
+    margin: auto;
+    width: 90vh;
+    height: 100vh;
+}
+.TituloPage{
+    background-color: var(--color-verde-forte);
+    color: white;
+    padding: 20px 50px;
+    font-size: 35px;
+    border: 3px solid white;
+    border-radius: 10px;
+    box-shadow: var(--shadow-box);
+}
+.menu-lista{
+    margin-top: 90px;
+}
+.botoesMenu{
+    list-style-type: none;
+    width: 50vh;
+    padding: 15px;
+    margin-top: 50px;
+    margin-left: 15%;
+    font-weight: bold;
+    font-size: 20px;
+    border: 3px solid white;
+    border-radius: 10px;
+    box-shadow: var(--shadow-box);
+}
+.botoesMenu:hover{
+    border: 3px solid var(--color-verde-forte);
+}
+a{
+    text-decoration: none;
+    color: var(--color-verde-forte);
+}
+
+/* CADASTRAR ESTABELECIMENTO  */
+.botoesInput{
+    margin: auto;
+}
+.formulario-cadastro{
+    margin-right: 15%;
+
+}
+.botao-cadastro{
+    background-color: var(--color-verde-folha);
+    padding: 10px 30px;
+    margin-top: 50px;
+    color: white;
+    font-weight: bold;
+    border: 3px solid white;
+    border-radius: 10px;
+    box-shadow: 1px 3px 3px var(--sombra),
+    -1px 0 0.4em var(--sombra);
+}
+.botao-cadastro:hover{
+    border: 3px solid #073832;
+}
+
+#voltar-ao-menu{
+    padding: 10px 30px;
+} 

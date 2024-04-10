@@ -30,26 +30,32 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css" alt="text-css">
+    <script src="./script.js"></script>
     <title>Estabelecimentos</title>
 </head>
 <body>
-    <a href="../menu.php"><button>Voltar ao Menu</button></a>
-    <h2 class="TituloPage" id="SecCadastEstab"> Cadastrar Estabelecimento</h2>
-
-    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" id="formCadEstab">
-        <input type="text" name="NomeFantasia" id="NomeFantasia" placeholder="Nome fantasia" class="styleInputs"> </br>
-        <input type="text" name="Endereco" id="Endereco" placeholder="Endereço" class="styleInputs">
-        <input type="text" name="Cidade" id="Cidade" placeholder="Cidade" class="styleInputs">
-        <input type="number" name="NumeroLojas" id="NumeroLojas" placeholder="Número de lojas" class="styleInputs"> </br>
-
-        <div class="botoesInput">
-            <input type="submit" name="Cadastrar" id="Cadastrar" value="Cadastrar" class="botoesMenu">
-            <input type="submit" name="Limpar" id="Limpar" value="Limpar" class="botoesMenu" onclick="limparForEstab()">
+    <div class="backgroud-img">
+        <div class="conteudo">
+            <h2 class="TituloPage" id="SecCadastEstab"> Cadastrar Estabelecimento</h2>
+            <div class="formulario-cadastro">
+                <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" id="formCadEstab">
+                    <input type="text" name="NomeFantasia" id="NomeFantasia" placeholder="Nome fantasia" class="botoesMenu"> 
+                    <input type="text" name="Endereco" id="Endereco" placeholder="Endereço" class="botoesMenu">
+                    <input type="text" name="Cidade" id="Cidade" placeholder="Cidade" class="botoesMenu">
+                    <input type="number" name="NumeroLojas" id="NumeroLojas" placeholder="Número de lojas" class="botoesMenu"> 
+            </div>
+                <div class="botoesInput">
+                    <input type="submit" name="Cadastrar" id="Cadastrar" value="Cadastrar" class="botao-cadastro">
+                    <!-- <input type="submit" name="Limpar" id="Limpar" value="Limpar" class="botao-cadastro" onclick="limparFormEstab()"> -->
+                </div>
+                </form>
+            <a href="../menu.php"><button id="voltar-ao-menu" class="botao-cadastro">Voltar ao Menu</button></a>
         </div>
-    </form>
+    </div>
 </body>
 </html>

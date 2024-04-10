@@ -3,43 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css" alt="text-css">
     <title>Promoções</title>
 </head>
 <body>
-    <a href="../menu.php"><button>Voltar ao Menu</button></a>
-    <h2>Promoções</h2>
-    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="get">
-        <label for="estabelecimento">Escolha o Estabelecimento:</label><br>
-        <select id="estabelecimento" name="estabelecimento">
-            <option value="">Selecione o Estabelecimento</option>
-            <?php
-            // Estabelece a conexão com o banco de dados
-            $conexao = new mysqli("localhost", "root", "", "produtos_de_supermercados");
+    
+    <div class="backgroud-img">
+        <div class="conteudo">
+            <h2 class="TituloPage">Promoções</h2>
+            <a href="../menu.php"><button class="botao-cadastro">Voltar ao Menu</button></a>
+            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="get">
+                <select id="estabelecimento" name="estabelecimento" class="botoesMenu">
+                    <option value="">Selecione o Estabelecimento</option>
+     
+                    <?php
+                    // Estabelece a conexão com o banco de dados
+                    $conexao = new mysqli("localhost", "root", "", "produtos_de_supermercados");
 
-            // Verifica a conexão
-            if ($conexao->connect_error) {
-                die("Conexão falhou: " . $conexao->connect_error);
-            }
+                    // Verifica a conexão
+                    if ($conexao->connect_error) {
+                        die("Conexão falhou: " . $conexao->connect_error);
+                    }
 
-            // Consulta SQL para obter os estabelecimentos disponíveis
-            $sql = "SELECT DISTINCT nome_fantasia FROM estabelecimentos";
-            $resultado = $conexao->query($sql);
+                    // Consulta SQL para obter os estabelecimentos disponíveis
+                    $sql = "SELECT DISTINCT nome_fantasia FROM estabelecimentos";
+                    $resultado = $conexao->query($sql);
 
-            // Verifica se há resultados
-            if ($resultado->num_rows > 0) {
-                // Exibe os estabelecimentos como opções no menu suspenso
-                while ($row = $resultado->fetch_assoc()) {
-                    echo "<option value='{$row['nome_fantasia']}'>{$row['nome_fantasia']}</option>";
-                }
-            }
+                    // Verifica se há resultados
+                    if ($resultado->num_rows > 0) {
+                        // Exibe os estabelecimentos como opções no menu suspenso
+                        while ($row = $resultado->fetch_assoc()) {
+                            echo "<option value='{$row['nome_fantasia']}'>{$row['nome_fantasia']}</option>";
+                        }
+                    }
 
-            // Fecha a conexão com o banco de dados
-            $conexao->close();
-            ?>
-        </select><br><br>
-        
-        <input type="submit" value="Mostrar Promoções">
-    </form>
+                    // Fecha a conexão com o banco de dados
+                    $conexao->close();
+                    ?>
+                </select><br><br>
+                
+                <input type="submit" value="Mostrar Promoções" class="botao-cadastro">
+            </form>
+        </div>
+    </div>
 
     <?php
     // Verifica se o formulário foi enviado
